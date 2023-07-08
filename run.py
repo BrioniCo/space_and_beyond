@@ -46,11 +46,48 @@ def start_game():
     print("\nYour decisions will determine your fate...so choose wisely\n Good Luck!")
     print("           -------------" )
     print(art)
+    chapter_one()
 
 def chapter_one():
+    print("Chapter 1: The Strange Galaxy")
+    print("           -------------" )
+    print("\nYou wake from hypersleep to find yourself in a strange galaxy")
+    print("Your navigation system is malfunctioning- you need to act fast!\n You have two choices: ")
+    print("1. Head towards the rainbow star cluster.")
+    print("2. Follow the gravitational pull of a nearby planet.")
+    choice = input("Enter your choice (1 or 2):")
     
-    
-    
+    if choice == "1":
+        print("You have chosen to direct the craft towards the rainbow star cluster\n")
+        chapter_2()
+
+    elif choice == "2":
+        print("You follow the gravitational pull of a nearby monster planet")
+        print("As you near the planet you realize with horror that it is a black hole!")
+        print("Your ship is sucked into oblivion")
+        game_over()
+
+def chapter_2():
+    print("You have reached chapter 2\n")
+
+
+def game_over():
+    print("game over")
+    art = '''
+  _____          __  __ ______    ______      ________ _____  
+ / ____|   /\   |  \/  |  ____|  / __ \ \    / /  ____|  __ \ 
+| |  __   /  \  | \  / | |__    | |  | \ \  / /| |__  | |__) |
+| | |_ | / /\ \ | |\/| |  __|   | |  | |\ \/ / |  __| |  _  / 
+| |__| |/ ____ \| |  | | |____  | |__| | \  /  | |____| | \ \ 
+ \_____/_/    \_\_|  |_|______|  \____/   \/   |______|_|  \_\
+    '''
+    print(art)
+    restart = input("Would you like to try again? : (y or n)\n")
+    if restart.lower() == "y":
+        print("You have decided to try again- godspeed!\n ")
+        start_game()
+
+
 
 welcome_to_game()
 
