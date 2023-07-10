@@ -3,6 +3,7 @@
 
 def welcome_to_game():
     print("\nWelcome to Space and Beyond!")
+    print("           -------------" )
     art = '''
                 _____
              ,-"     "-.
@@ -68,11 +69,29 @@ def chapter_one():
         game_over()
     else:
         print(f"You entered {choice}. This is an invalid choice, please choose either 1 or 2!\n")
-        
+        chapter_one()
 
 def chapter_2():
-    print("You have reached chapter 2\n")
+    print("You have reached chapter 2\n The Mysterious Planet")
+    print("You arrive at the star cluster and find a lush planet, covered in vegetation")
+    print("You can choose to:")
+    print("\n1. Explore the forest")
+    print("\n2. Search the plains for signs of intelligent life")
+    choice = input("Enter your choice (1 or 2):")
 
+    if choice == "1":
+        print("You have chosen to explore the forest\n")
+        print("After several hours of searching you become disoriented and lost/n")
+        print("Your remains are found by an explorer from the planet Zlog many aeons later")
+        game_over()
+    elif choice == "2":
+        print("You set off in search of intelligent life\n")
+        print("You encounter an ancient temple and manage to decipher the entry code\n")
+        print("The heavy stone doors grind open")
+        chapter_3()
+    else:
+        print(f"You entered {choice}. This is an invalid choice, please choose either 1 or 2!\n")
+        chapter_2()
 
 def game_over():
     art = '''
@@ -89,7 +108,7 @@ def game_over():
         print("You have decided to try again- godspeed!\n ")
         start_game()
     else:
-        print("/nThank you for playing Space and Beyond!")
+        print("Thank you for playing Space and Beyond!")
         print("\n May we meet again somewhere sometime in space and beyond!!")
     
 
