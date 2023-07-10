@@ -66,6 +66,9 @@ def chapter_one():
         print("As you near the planet you realize with horror that it is a black hole!\n")
         print("Your ship has been sucked into oblivion")
         game_over()
+    else:
+        print(f"You entered {choice}. This is an invalid choice, please choose either 1 or 2!\n")
+        
 
 def chapter_2():
     print("You have reached chapter 2\n")
