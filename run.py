@@ -52,9 +52,9 @@ def chapter_one():
     print("Chapter 1: The Strange Galaxy")
     print("           -------------" )
     print("\nYou wake from hypersleep to find yourself in a strange galaxy")
-    print("Your navigation system is malfunctioning- you need to act fast!\n You have two choices: ")
+    print("Your navigation system is malfunctioning- you need to act fast!\n You have two choices: \n")
     print("1. Head towards the rainbow star cluster.")
-    print("2. Follow the gravitational pull of a nearby planet.")
+    print("2. Follow the gravitational pull of a nearby planet.\n")
     choice = input("Enter your choice (1 or 2):")
     
     if choice == "1":
@@ -62,9 +62,9 @@ def chapter_one():
         chapter_2()
 
     elif choice == "2":
-        print("You follow the gravitational pull of a nearby monster planet")
-        print("As you near the planet you realize with horror that it is a black hole!")
-        print("Your ship is sucked into oblivion")
+        print("You follow the gravitational pull of a nearby monster planet\n")
+        print("As you near the planet you realize with horror that it is a black hole!\n")
+        print("Your ship has been sucked into oblivion")
         game_over()
 
 def chapter_2():
@@ -72,7 +72,6 @@ def chapter_2():
 
 
 def game_over():
-    print("game over")
     art = '''
   _____          __  __ ______    ______      ________ _____  
  / ____|   /\   |  \/  |  ____|  / __ \ \    / /  ____|  __ \ 
@@ -86,6 +85,10 @@ def game_over():
     if restart.lower() == "y":
         print("You have decided to try again- godspeed!\n ")
         start_game()
+    else:
+        print("/nThank you for playing Space and Beyond!")
+        print("\n May we meet again somewhere sometime in space and beyond!!")
+    
 
 
 
